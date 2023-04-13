@@ -13,6 +13,7 @@ group = project.maven_group
 repositories {
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
+	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' } // GeckoLib
 }
 
 dependencies {
@@ -23,6 +24,9 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// GeckoLib for entity animations
+	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${project.gecko_version}"
 
 	// Dev QOL
 	modLocalRuntime("com.terraformersmc:modmenu:${modmenu_version}")
