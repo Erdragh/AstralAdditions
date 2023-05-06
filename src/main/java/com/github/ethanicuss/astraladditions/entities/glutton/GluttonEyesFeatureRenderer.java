@@ -1,4 +1,4 @@
-package com.github.ethanicuss.astraladditions.entities.hemogiant;
+package com.github.ethanicuss.astraladditions.entities.glutton;
 
 import com.github.ethanicuss.astraladditions.AstralAdditions;
 import net.fabricmc.api.EnvType;
@@ -10,11 +10,11 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 
 @Environment(value=EnvType.CLIENT)
-public class HemogiantEyesFeatureRenderer<T extends LivingEntity>
-        extends EyesFeatureRenderer<T, HemogiantEntityModel<T>> {
+public class GluttonEyesFeatureRenderer<T extends LivingEntity>
+        extends EyesFeatureRenderer<T, GluttonEntityModel<T>> {
     private static final RenderLayer SKIN = RenderLayer.getEyes(new Identifier(AstralAdditions.MOD_ID, "textures/entity/glutton/glutton_eyes.png"));
 
-    public HemogiantEyesFeatureRenderer(FeatureRendererContext<T, HemogiantEntityModel<T>> featureRendererContext) {
+    public GluttonEyesFeatureRenderer(FeatureRendererContext<T, GluttonEntityModel<T>> featureRendererContext) {
         super(featureRendererContext);
     }
 
