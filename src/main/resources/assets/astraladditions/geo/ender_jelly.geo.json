@@ -1,0 +1,139 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ender_jelly",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root_joint",
+					"pivot": [0, 7, 0],
+					"cubes": [
+						{"origin": [-7, 0, -7], "size": [14, 14, 14], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "lower_body_joint",
+					"parent": "root_joint",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, -5, -3], "size": [6, 5, 6], "uv": [34, 34]}
+					]
+				},
+				{
+					"name": "body_base_joint",
+					"parent": "lower_body_joint",
+					"pivot": [0, -5, 0],
+					"cubes": [
+						{"origin": [-5, -7, -5], "size": [10, 2, 10], "uv": [0, 28]}
+					]
+				},
+				{
+					"name": "tentacle_joint_1",
+					"parent": "body_base_joint",
+					"pivot": [-5, -7, 0],
+					"cubes": [
+						{"origin": [-6, -12, -1], "size": [2, 5, 2], "uv": [38, 45]}
+					]
+				},
+				{
+					"name": "tentacle_middle_joint",
+					"parent": "tentacle_joint_1",
+					"pivot": [-5, -12, 0],
+					"cubes": [
+						{"origin": [-6, -17, -1], "size": [2, 5, 2], "uv": [30, 45]}
+					]
+				},
+				{
+					"name": "tentacle_lower_joint",
+					"parent": "tentacle_middle_joint",
+					"pivot": [-5, -17, 0],
+					"cubes": [
+						{"origin": [-6, -22, -1], "size": [2, 5, 2], "uv": [42, 7]}
+					]
+				},
+				{
+					"name": "tentacle_joint_2",
+					"parent": "body_base_joint",
+					"pivot": [0, -7, 5],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [-1, -12, 4], "size": [2, 5, 2], "uv": [42, 0]}
+					]
+				},
+				{
+					"name": "tentacle_middle_joint2",
+					"parent": "tentacle_joint_2",
+					"pivot": [0, -12, 5],
+					"cubes": [
+						{"origin": [-1, -17, 4], "size": [2, 5, 2], "uv": [24, 40]}
+					]
+				},
+				{
+					"name": "tentacle_lower_joint2",
+					"parent": "tentacle_middle_joint2",
+					"pivot": [0, -17, 5],
+					"cubes": [
+						{"origin": [-1, -22, 4], "size": [2, 5, 2], "uv": [16, 40]}
+					]
+				},
+				{
+					"name": "tentacle_joint_3",
+					"parent": "body_base_joint",
+					"pivot": [5, -7, 0],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{"origin": [4, -12, -1], "size": [2, 5, 2], "uv": [8, 40]}
+					]
+				},
+				{
+					"name": "tentacle_middle_joint3",
+					"parent": "tentacle_joint_3",
+					"pivot": [5, -12, 0],
+					"cubes": [
+						{"origin": [4, -17, -1], "size": [2, 5, 2], "uv": [0, 40]}
+					]
+				},
+				{
+					"name": "tentacle_lower_joint3",
+					"parent": "tentacle_middle_joint3",
+					"pivot": [5, -17, 0],
+					"cubes": [
+						{"origin": [4, -22, -1], "size": [2, 5, 2], "uv": [30, 28]}
+					]
+				},
+				{
+					"name": "tentacle_joint_4",
+					"parent": "body_base_joint",
+					"pivot": [0, -7, -5],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [-1, -12, -6], "size": [2, 5, 2], "uv": [0, 28]}
+					]
+				},
+				{
+					"name": "tentacle_middle_joint4",
+					"parent": "tentacle_joint_4",
+					"pivot": [0, -12, -5],
+					"cubes": [
+						{"origin": [-1, -17, -6], "size": [2, 5, 2], "uv": [6, 5]}
+					]
+				},
+				{
+					"name": "tentacle_lower_joint4",
+					"parent": "tentacle_middle_joint4",
+					"pivot": [0, -17, -5],
+					"cubes": [
+						{"origin": [-1, -22, -6], "size": [2, 5, 2], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

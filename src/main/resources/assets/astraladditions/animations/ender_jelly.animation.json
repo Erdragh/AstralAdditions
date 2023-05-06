@@ -1,0 +1,72 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ender_jelly.tentacle_idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"tentacle_joint_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 12.5]
+						},
+						"0.5": {
+							"vector": [0, 0, 20],
+							"easing": "easeOutExpo"
+						},
+						"1.5": {
+							"vector": [0, 0, -10],
+							"easing": "easeInQuint"
+						},
+						"2.0": {
+							"vector": [0, 0, 12.5]
+						}
+					}
+				},
+				"tentacle_middle_joint": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -5]
+						},
+						"0.5": {
+							"vector": [0, 0, 7.5]
+						},
+						"1.0": {
+							"vector": [0, 0, 12.5]
+						},
+						"1.5": {
+							"vector": [0.84073, 0.22526, -7.46092],
+							"easing": "easeInSine"
+						},
+						"2.0": {
+							"vector": [0, 0, -5]
+						}
+					}
+				},
+				"tentacle_lower_joint": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -5]
+						},
+						"0.5": {
+							"vector": [0, 0, 7.5]
+						},
+						"1.0": {
+							"vector": [0, 0, 20]
+						},
+						"1.5": {
+							"vector": [0, 0, 12.5],
+							"easing": "easeOutExpo"
+						},
+						"1.6667": {
+							"vector": [0, 0, -8.33]
+						},
+						"2.0": {
+							"vector": [0, 0, -5]
+						}
+					}
+				}
+			}
+		}
+	}
+}

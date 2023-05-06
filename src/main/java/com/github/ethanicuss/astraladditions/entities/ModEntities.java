@@ -1,6 +1,8 @@
 package com.github.ethanicuss.astraladditions.entities;
 
 import com.github.ethanicuss.astraladditions.AstralAdditions;
+import com.github.ethanicuss.astraladditions.entities.enderjelly.EnderJellyEntity;
+import com.github.ethanicuss.astraladditions.entities.enderjelly.EnderJellyEntityRenderer;
 import com.github.ethanicuss.astraladditions.entities.hemogiant.HemogiantEntity;
 import com.github.ethanicuss.astraladditions.entities.hemogiant.HemogiantEntityModel;
 import com.github.ethanicuss.astraladditions.entities.hemogiant.HemogiantEntityRenderer;
@@ -59,6 +61,12 @@ public class ModEntities {
 			FabricEntityTypeBuilder.create(SpawnGroup.MISC, GluttonyBallEntity::new).dimensions(EntityDimensions.fixed(1.0f, 1.0f)).build()
 	);
 
+    public static final EntityType<EnderJellyEntity> ENDER_JELLY = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier(AstralAdditions.MOD_ID, "ender_jelly"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnderJellyEntity::new).dimensions(EntityDimensions.fixed(14f / 16f, 14f / 16f)).build()
+    );
+
     public static final EntityModelLayer MODEL_MOONMAN_LAYER = new EntityModelLayer(new Identifier(AstralAdditions.MOD_ID, "moonman"), "main");
     public static final EntityModelLayer MODEL_GLUTTON_LAYER = new EntityModelLayer(new Identifier(AstralAdditions.MOD_ID, "hemogiant"), "main");
     public static final EntityModelLayer MODEL_VOIDTOUCHED_SKELETON_LAYER = new EntityModelLayer(new Identifier(AstralAdditions.MOD_ID, "voidtouched_skeleton"), "main");
@@ -69,6 +77,7 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(GLUTTON, HemogiantEntity.createGluttonAttributes());
         FabricDefaultAttributeRegistry.register(VOIDTOUCHED_SKELETON, VoidtouchedSkeletonEntity.createVoidtouchedSkeletonAttributes());
         FabricDefaultAttributeRegistry.register(VOIDTOUCHED_ZOMBIE, VoidtouchedZombieEntity.createVoidtouchedZombieAttributes());
+        FabricDefaultAttributeRegistry.register(ENDER_JELLY, EnderJellyEntity.createMobAttributes());
     }
 
     public static void initClient() {
@@ -87,5 +96,7 @@ public class ModEntities {
         EntityRendererRegistry.register(ENDER_BALL, EnderBallEntityRenderer::new);
         
         EntityRendererRegistry.register(GLUTTONY_BALL, GluttonyBallEntityRenderer::new);
+
+        EntityRendererRegistry.register(ENDER_JELLY, EnderJellyEntityRenderer::new);
     }
 }
